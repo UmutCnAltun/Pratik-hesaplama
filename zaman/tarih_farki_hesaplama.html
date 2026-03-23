@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarih Farkı Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/time.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="zaman-menu" class="sub-menu" style="display: block;">
+            <a href="yas_hesaplama.html">Yaş Hesaplama</a>
+            <a href="tarih_farki_hesaplama.html">Tarih Farkı Hesaplama</a>
+            <a href="gun_sayisi_hesaplama.html">Gün Sayısı Hesaplama</a>
+            <a href="saat_farki_hesaplama.html">Saat Farkı Hesaplama</a>
+            <a href="hafta_hesaplama.html">Hafta/Ay/Yıl Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Tarih Farkı Hesaplama</h1>
+
+        <div class="calculator-container">
+            <form id="tarihFarkiForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="baslangicTarihi">* Başlangıç Tarihi:</label>
+                    <div class="input-container">
+                        <input type="date" id="baslangicTarihi" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bitisTarihi">* Bitiş Tarihi:</label>
+                    <div class="input-container">
+                        <input type="date" id="bitisTarihi" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">Farkı Hesapla</button>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display: none;">
+                <h3>Sonuç</h3>
+                <div id="sonuc"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tarih_farki_hesaplama.js"></script>
+</body>
+</html>

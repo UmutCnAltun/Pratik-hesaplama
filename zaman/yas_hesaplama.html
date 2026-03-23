@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaş Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/time.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="zaman-menu" class="sub-menu" style="display: block;">
+            <a href="yas_hesaplama.html">Yaş Hesaplama</a>
+            <a href="tarih_farki_hesaplama.html">Tarih Farkı Hesaplama</a>
+            <a href="gun_sayisi_hesaplama.html">Gün Sayısı Hesaplama</a>
+            <a href="saat_farki_hesaplama.html">Saat Farkı Hesaplama</a>
+            <a href="hafta_hesaplama.html">Hafta/Ay/Yıl Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Yaş Hesaplama</h1>
+
+        <div class="calculator-container">
+            <form id="yasForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="dogumTarihi">* Doğum Tarihi:</label>
+                    <div class="input-container">
+                        <input type="date" id="dogumTarihi" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hesaplamaTarihi">Hesaplama Tarihi (Boş bırakılırsa bugün):</label>
+                    <div class="input-container">
+                        <input type="date" id="hesaplamaTarihi">
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">Yaşını Hesapla</button>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display: none;">
+                <h3>Sonuç</h3>
+                <div id="sonuc"></div>
+            </div>
+        </div>
+    </main>
+
+     <div class="info-container">
+     <h2>Yaş Hesaplama Hakkında</h2>
+
+     <section>
+        <h3>Yaş hesaplama nedir?</h3>
+        <p>
+            Yaş hesaplama, bir kişinin doğum tarihine göre
+            bugünkü yaşını yıl, ay ve gün cinsinden hesaplama işlemidir.
+            Genellikle kimlik doğrulama, resmi işlemler ve kişisel bilgi amaçlı kullanılır.
+        </p>
+     </section>
+
+     <section>
+        <h3>Yaş hesaplama nasıl yapılır?</h3>
+        <p>
+            Yaş, doğum tarihi ile bugünün tarihi arasındaki fark alınarak hesaplanır.
+            Hesaplama sırasında yıl, ay ve gün farkları dikkate alınır.
+        </p>
+     </section>
+
+     <section>
+        <h3>Hesaplama sonucu:</h3>
+        <p>
+            • Kaç yaşında olduğunuz<br>
+            • Kaç ay ve gün yaşadığınız<br>
+            • Toplam geçen gün sayısı
+        </p>
+     </section>
+     </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/yas_hesaplama.js"></script>
+</body>
+</html>

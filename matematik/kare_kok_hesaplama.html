@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kare Kök Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/math.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="matematik-menu" class="sub-menu" style="display: block;">
+            <a href="temel_islemler_hesaplama.html">Temel İşlemler</a>
+            <a href="yuzde_hesaplama.html">Yüzde Hesaplama</a>
+            <a href="kare_kok_hesaplama.html">Kare Kök Hesaplama</a>
+            <a href="us_alma_hesaplama.html">Üs Alma</a>
+            <a href="faktoriyel_hesaplama.html">Faktöriyel Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Kare Kök Hesaplama</h1>
+
+        <div class="calculator-container">
+            <form id="kareKokForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="sayi">* Sayı:</label>
+                    <div class="input-container">
+                        <input type="number" id="sayi" min="0" step="any" required>
+                        <small class="input-hint">Negatif sayıların karekökü alınamaz.</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ondalikBasamak">Ondalık Basamak Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="ondalikBasamak" min="0" max="10" value="2">
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">Karekökünü Al</button>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display: none;">
+                <h3>Sonuç</h3>
+                <div id="sonuc"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/kare_kok_hesaplama.js"></script>
+</body>
+</html>

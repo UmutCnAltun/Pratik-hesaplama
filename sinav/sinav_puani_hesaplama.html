@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınav Puanı Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/exam.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="sinav-menu" class="sub-menu" style="display: block;">
+            <a href="not_ortalamasi_hesaplama.html">Not Ortalaması Hesaplama</a>
+            <a href="sinav_puani_hesaplama.html">Sınav Puanı Hesaplama</a>
+            <a href="basari_yuzdesi_hesaplama.html">Başarı Yüzdesi Hesaplama</a>
+            <a href="sinav_zamani_hesaplama.html">Sınav Zamanı Hesaplama</a>
+            <a href="yks_hesaplama.html">YKS Puan Hesaplama</a>
+
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Sınav Puanı Hesaplama Aracı</h1>
+
+        <div class="calculator-container">
+            <form id="sinavPuaniForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="dogruSayisi">* Doğru Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="dogruSayisi" placeholder="Örn. 35" required min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yanlisSayisi">* Yanlış Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="yanlisSayisi" placeholder="Örn. 5" required min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bosSayisi">Boş Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="bosSayisi" placeholder="Örn. 10" min="0" value="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="toplamSoru">* Toplam Soru Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="toplamSoru" placeholder="Örn. 50" required min="1">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>Net Doğru Sayısı: <span id="netDogru"></span></p>
+                <p>Başarı Yüzdesi: <span id="basariYuzdesi"></span></p>
+                <p>Puan: <span id="puan"></span></p>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h2>Sınav Puanı Hesaplama Hakkında</h2>
+
+            <section>
+                <h3>Nasıl hesaplanır?</h3>
+                <p>Sınav puanları genellikle doğru ve yanlış cevaplar dikkate alınarak hesaplanır. Yanlış cevaplar doğru cevapları etkileyebilir.</p>
+            </section>
+
+            <section>
+                <h3>Net doğru hesaplama:</h3>
+                <p>Net Doğru = Doğru Sayısı - (Yanlış Sayısı ÷ 4)</p>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/sinav_puani.js"></script>
+</body>
+</html>

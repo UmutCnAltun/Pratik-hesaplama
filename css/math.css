@@ -1,0 +1,131 @@
+.page-title {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.required-info {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-container input:focus,
+.input-container select:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+.input-hint {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+.result-area {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #0077b6;
+}
+
+.result-area h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+#sonuc {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.calculation-explanation {
+    font-size: 0.9em;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.5em;
+    }
+
+    #sonuc {
+        font-size: 1.2em;
+    }
+}

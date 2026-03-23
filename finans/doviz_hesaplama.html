@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döviz Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/finance.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="finans-menu" class="sub-menu" style="display: block;">
+            <a href="altin_hesaplama.html">Altın Hesaplama</a>
+            <a href="doviz_hesaplama.html">Döviz Hesaplama</a>
+            <a href="faiz_hesaplama.html">Faiz Hesaplama</a>
+            <a href="birikim_hesaplama.html">Birikim Hesaplama</a>
+            <a href="kira_artis_orani_hesaplama.html">Kira Artış Oranı Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Döviz Hesaplama Aracı</h1>
+        
+        <div class="calculator-container">
+            <form id="dovizForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+                
+                <div class="form-group">
+                    <label for="miktar">* Miktar:</label>
+                    <div class="input-container">
+                        <input type="number" id="miktar" step="0.01" placeholder="Örn. 100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="kur">* Döviz Kuru:</label>
+                    <div class="input-container">
+                        <input type="number" id="kur" step="0.01" placeholder="Örn. 30.5" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>TL Karşılığı: <span id="tlKarsilik"></span> TL</p>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/doviz_hesaplama.js"></script>
+</body>
+</html>

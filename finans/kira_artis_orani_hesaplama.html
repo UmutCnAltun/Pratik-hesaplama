@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kira Artış Oranı Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/finance.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="finans-menu" class="sub-menu" style="display: block;">
+            <a href="altin_hesaplama.html">Altın Hesaplama</a>
+            <a href="doviz_hesaplama.html">Döviz Hesaplama</a>
+            <a href="faiz_hesaplama.html">Faiz Hesaplama</a>
+            <a href="birikim_hesaplama.html">Birikim Hesaplama</a>
+            <a href="kira_artis_orani_hesaplama.html">Kira Artış Oranı Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Kira Artış Oranı Hesaplama Aracı</h1>
+        
+        <div class="calculator-container">
+            <form id="kiraArtisForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+                
+                <div class="form-group">
+                    <label for="eskiKira">* Eski Kira Bedeli:</label>
+                    <div class="input-container">
+                        <input type="number" id="eskiKira" placeholder="Örn. 2000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yeniKira">* Yeni Kira Bedeli:</label>
+                    <div class="input-container">
+                        <input type="number" id="yeniKira" placeholder="Örn. 2200" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>Artış Oranı: <span id="artisOrani"></span> %</p>
+                <p>Artış Tutarı: <span id="artisTutari"></span> TL</p>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/kira_artis_orani_hesaplama.js"></script>
+</body>
+</html>

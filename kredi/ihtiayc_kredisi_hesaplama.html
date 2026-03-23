@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İhtiyaç Kredisi Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/credit.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="kredi-menu" class="sub-menu" style="display: block;">
+            <a href="ihtiayc_kredisi_hesaplama.html">İhtiyaç Kredisi Hesaplama</a>
+            <a href="kredi_hesaplama.html">Kredi Hesaplama</a>
+            <a href="kredi_gecikme_faizi_hesaplama.html">Kredi Gecikme Faizi Hesaplama</a>
+            <a href="kredi_erken_kapatma_cezasi_hesaplama.html">Kredi Erken Kapatma Cezası Hesaplama</a>
+            <a href="kredi_karti_ek_taksit_hesaplama.html">Kredi Kartı Ek Taksit Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">İhtiyaç Kredisi Hesaplama Aracı</h1>
+        
+        <div class="calculator-container">
+            <form id="krediHesaplamaForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+                
+                <div class="form-group">
+                    <label for="hesaplamaSekli">Hesaplama Şekli:</label>
+                    <div class="input-container">
+                        <input type="checkbox" id="hesaplamaSekli">
+                        <label for="hesaplamaSekli" class="checkbox-label">Aylık taksit tutarına göre hesaplama yapmak için bu kutucuğu işaretleyiniz.</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="krediTutari">* Kredi Tutarı:</label>
+                    <div class="input-container">
+                        <input type="number" id="krediTutari" placeholder="Örn. 12500" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vade">* Vade (Ay):</label>
+                    <div class="input-container">
+                        <input type="number" id="vade" placeholder="Örn. 24" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aylikFaizOrani">* Aylık Faiz Oranı (%):</label>
+                    <div class="input-container">
+                        <input type="number" id="aylikFaizOrani" step="0.01" placeholder="Örn. 0,99" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>Aylık Taksit Tutarı: <span id="aylikTaksit"></span></p>
+                <p>Toplam Geri Ödeme: <span id="toplamOdeme"></span></p>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/ihtiayc_kredisi.js"></script>
+</body>
+</html>

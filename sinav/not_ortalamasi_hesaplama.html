@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Ortalaması Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/exam.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="sinav-menu" class="sub-menu" style="display: block;">
+            <a href="not_ortalamasi_hesaplama.html">Not Ortalaması Hesaplama</a>
+            <a href="sinav_puani_hesaplama.html">Sınav Puanı Hesaplama</a>
+            <a href="basari_yuzdesi_hesaplama.html">Başarı Yüzdesi Hesaplama</a>
+            <a href="sinav_zamani_hesaplama.html">Sınav Zamanı Hesaplama</a>
+            <a href="yks_hesaplama.html">YKS Puan Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Not Ortalaması Hesaplama Aracı</h1>
+
+        <div class="calculator-container">
+            <form id="notOrtalamasiForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="dersSayisi">* Ders Sayısı:</label>
+                    <div class="input-container">
+                        <input type="number" id="dersSayisi" placeholder="Örn. 5" required min="1">
+                    </div>
+                </div>
+
+                <div id="dersInputs">
+                    <!-- Ders notları buraya dinamik olarak eklenecek -->
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="ekleDersBtn" class="calculate-btn">Ders Ekle</button>
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>Genel Not Ortalaması: <span id="genelOrtalama"></span></p>
+                <p>Harf Notu: <span id="harfNotu"></span></p>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h2>Not Ortalaması Hakkında Bilgiler</h2>
+
+            <section>
+                <h3>Not ortalaması nedir?</h3>
+                <p>Not ortalaması, öğrencinin aldığı derslerin notlarının aritmetik ortalamasıdır. Türkiye'de genellikle 4'lük sistem kullanılır.</p>
+            </section>
+
+            <section>
+                <h3>Harf notu sistemi:</h3>
+                <p>
+                    AA: 90-100 (4.0)<br>
+                    BA: 85-89 (3.5)<br>
+                    BB: 80-84 (3.0)<br>
+                    CB: 75-79 (2.5)<br>
+                    CC: 70-74 (2.0)<br>
+                    DC: 65-69 (1.5)<br>
+                    DD: 60-64 (1.0)<br>
+                    FD: 50-59 (0.5)<br>
+                    FF: 0-49 (0.0)
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/not_ortalamasi.js"></script>
+</body>
+</html>

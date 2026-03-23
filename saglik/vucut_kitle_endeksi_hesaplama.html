@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vücut Kitle Endeksi Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/health.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="saglik-menu" class="sub-menu" style="display: block;">
+            <a href="adet_gunu_hesaplama.html">Adet Günü Hesaplama</a>
+            <a href="sigara_maliyeti_hesaplama.html">Sigara Maliyeti Hesaplama</a>
+            <a href="vucut_yag_orani_hesaplama.html">Vücut Yağ Oranı Hesaplama</a>
+            <a href="vucut_kitle_endeksi_hesaplama.html">Vücut Kitle Endeksi Hesaplama</a>
+            <a href="bebek_kilosu_hesaplama.html">Bebek Kilosu Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">Vücut Kitle Endeksi Hesaplama Aracı</h1>
+        
+        <div class="calculator-container">
+            <form id="bmiForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+                
+                <div class="form-group">
+                    <label for="boy">* Boy (cm):</label>
+                    <div class="input-container">
+                        <input type="number" id="boy" placeholder="Örn. 170" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="kilo">* Kilo (kg):</label>
+                    <div class="input-container">
+                        <input type="number" id="kilo" step="0.1" placeholder="Örn. 70" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <p>Vücut Kitle Endeksi: <span id="bmi"></span></p>
+                <p>Durum: <span id="durum"></span></p>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/vucut_kitle_endeksi.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKS Puan Hesaplama - Pratik Hesaplama.NET</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/exam.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">Pratik Hesaplama.NET</a>
+            <span class="slogan">"Artık hesaplamalar çok kolay"</span>
+        </div>
+    </header>
+    <div class="sub-menu-container">
+        <div id="sinav-menu" class="sub-menu" style="display: block;">
+            <a href="not_ortalamasi_hesaplama.html">Not Ortalaması Hesaplama</a>
+            <a href="sinav_puani_hesaplama.html">Sınav Puanı Hesaplama</a>
+            <a href="basari_yuzdesi_hesaplama.html">Başarı Yüzdesi Hesaplama</a>
+            <a href="sinav_zamani_hesaplama.html">Sınav Zamanı Hesaplama</a>
+            <a href="yks_hesaplama.html">YKS Puan Hesaplama</a>
+        </div>
+    </div>
+
+    <main class="content-area">
+        <h1 class="page-title">YKS Puan Hesaplama Aracı</h1>
+
+        <div class="calculator-container">
+            <form id="yksForm">
+                <p class="required-info">* Doldurulması zorunlu alanlar.</p>
+
+                <div class="form-group">
+                    <label for="sinavTuru">* Sınav Türü:</label>
+                    <div class="input-container">
+                        <select id="sinavTuru" required>
+                            <option value="">Seçiniz</option>
+                            <option value="tyt">TYT (Temel Yeterlilik Testi)</option>
+                            <option value="ayt">AYT (Alan Yeterlilik Testi)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="tytAlanlari" style="display: none;">
+                    <h3 style="color: #0077b6; margin: 20px 0 10px 0;">TYT Puanları</h3>
+
+                    <div class="form-group">
+                        <label for="tytTurkce">Türkçe Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="tytTurkce" placeholder="Örn. 35/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tytSosyal">Sosyal Bilimler Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="tytSosyal" placeholder="Örn. 18/2" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tytMatematik">Matematik Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="tytMatematik" placeholder="Örn. 32/8" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tytFen">Fen Bilimleri Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="tytFen" placeholder="Örn. 28/7" pattern="\d+/\d+">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="aytAlanlari" style="display: none;">
+                    <h3 style="color: #0077b6; margin: 20px 0 10px 0;">AYT Puanları</h3>
+
+                    <div class="form-group">
+                        <label for="aytTurkce">Türk Dili ve Edebiyatı Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytTurkce" placeholder="Örn. 20/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytTarih1">Tarih-1 Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytTarih1" placeholder="Örn. 15/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytCografya1">Coğrafya-1 Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytCografya1" placeholder="Örn. 12/3" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytTarih2">Tarih-2 Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytTarih2" placeholder="Örn. 10/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytCografya2">Coğrafya-2 Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytCografya2" placeholder="Örn. 8/2" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytFelsefe">Felsefe Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytFelsefe" placeholder="Örn. 15/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytDin">Din Kültürü Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytDin" placeholder="Örn. 12/3" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytMatematik">Matematik Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytMatematik" placeholder="Örn. 25/10" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytFizik">Fizik Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytFizik" placeholder="Örn. 18/7" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytKimya">Kimya Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytKimya" placeholder="Örn. 15/5" pattern="\d+/\d+">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aytBiyoloji">Biyoloji Doğru/Yanlış:</label>
+                        <div class="input-container">
+                            <input type="text" id="aytBiyoloji" placeholder="Örn. 18/7" pattern="\d+/\d+">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="diplomaNotu">Diploma Notu (4'lük Sistem):</label>
+                    <div class="input-container">
+                        <input type="number" id="diplomaNotu" step="0.01" placeholder="Örn. 3.50" min="0" max="4">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+            </form>
+
+            <div id="sonucAlani" class="result-area" style="display:none;">
+                <h2>Hesaplama Sonuçları</h2>
+                <div id="puanSonuclari"></div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h2>YKS Puan Hesaplama Hakkında</h2>
+
+            <section>
+                <h3>YKS puan türleri:</h3>
+                <p>
+                    <strong>TYT:</strong> Temel Yeterlilik Testi - Tüm lisans programlarına yerleşme hakkı<br>
+                    <strong>AYT:</strong> Alan Yeterlilik Testi - Lisans programlarına yerleşme<br>
+                    <strong>SAY:</strong> Sayısal Puan Türü<br>
+                    <strong>SÖZ:</strong> Sözel Puan Türü<br>
+                    <strong,EA:</strong> Eşit Ağırlık Puan Türü<br>
+                    <strong>DİL:</strong> Yabancı Dil Puan Türü
+                </p>
+            </section>
+
+            <section>
+                <h3>Puan hesaplama formülü:</h3>
+                <p>Yerleştirme Puanı = (Ham Puan × 0.4) + (Diploma Notu × 0.6 × 5) + 100</p>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/yks_hesaplama.js"></script>
+</body>
+</html>
