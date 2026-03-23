@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratik Hesaplama.NET | Artık Hesaplamalar Çok Kolay</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <a href="index.html">Pratik Hesaplama.NET</a>
             <span class="slogan">"Artık hesaplamalar çok kolay"</span>
         </div>
+        <button class="hamburger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav class="main-nav">
             <ul>
                 <li><a href="#" data-menu="kredi">Kredi</a></li>
@@ -67,13 +74,15 @@
             <a href="zaman/saat_farki_hesaplama.html">Saat Farkı Hesaplama</a>
             <a href="zaman/hafta_hesaplama.html">Hafta/Ay/Yıl Hesaplama</a>
         </div>
-        </div>
+    </div>
 
     <main class="content-area">
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title">Pratik Hesaplamalara Hoş Geldiniz</h1>
-                <p class="hero-subtitle">Günlük yaşamda sıkça kullanılan yüzlerce hesaplamayı bir araya getirerek doğru sonuçlara kolayca ulaşabilmenizi sağlayan, hesaplamanın güvenilir adresi Pratik Hesaplama.NET'e hoş geldiniz.</p>
+                <p class="hero-subtitle">Günlük yaşamda sıkça kullanılan yüzlerce hesaplamayı bir araya getirerek doğru
+                    sonuçlara kolayca ulaşabilmenizi sağlayan, hesaplamanın güvenilir adresi Pratik Hesaplama.NET'e hoş
+                    geldiniz.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">25+</span>
@@ -90,7 +99,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="calculator-icon">🧮</div>
+                <div class="calculator-icon"><img src="img/abacus.png" width="40%" height="40%"></div>
             </div>
         </section>
 
@@ -98,34 +107,25 @@
             <h2 class="section-title">Neden Pratik Hesaplama.NET?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon"><img src="img/lightning.png" width="20%" height="20%"></div>
                     <h3>Hızlı ve Kolay</h3>
-                    <p>Karmaşık hesaplamaları saniyeler içinde yapın. Kullanıcı dostu arayüzümüz ile herkes kolayca kullanabilir.</p>
+                    <p>Karmaşık hesaplamaları saniyeler içinde yapın. Kullanıcı dostu arayüzümüz ile herkes kolayca
+                        kullanabilir.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-icon"><img src="img/dart.png" width="20%" height="20%"></div>
                     <h3>Doğru Sonuçlar</h3>
                     <p>Güncel formüller ve algoritmalar kullanarak %100 doğru sonuçlar elde edin.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
+                    <div class="feature-icon"><img src="img/smartphone.png" width="20%" height="20%"></div>
                     <h3>Mobil Uyumlu</h3>
                     <p>Telefonunuzdan, tabletinizden veya bilgisayarınızdan kolayca erişin.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon"><img src="img/secure.png" width="20%" height="20%"></div>
                     <h3>Güvenli</h3>
                     <p>Verileriniz yerel olarak işlenir, hiçbir bilgi sunucularımıza gönderilmez.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <h3>Ücretsiz</h3>
-                    <p>Tüm hesaplamalarımız tamamen ücretsizdir, hiçbir gizli ücret yoktur.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Türkçe</h3>
-                    <p>Tamamen Türkçe arayüz ile yerel ihtiyaçlara uygun hesaplamalar.</p>
                 </div>
             </div>
         </section>
@@ -134,25 +134,25 @@
             <h2 class="section-title">En Popüler Hesaplamalar</h2>
             <div class="popular-grid">
                 <div class="popular-card" onclick="location.href='kredi/ihtiayc_kredisi_hesaplama.html'">
-                    <div class="popular-icon">💰</div>
+                    <div class="popular-icon"><img src="img/money.png" width="20%" height="20%"></div>
                     <h3>İhtiyaç Kredisi</h3>
                     <p>Kredi tutarı, vade ve faiz oranına göre aylık taksit hesaplayın.</p>
                     <span class="popular-link">Hemen Hesapla →</span>
                 </div>
                 <div class="popular-card" onclick="location.href='sinav/yks_hesaplama.html'">
-                    <div class="popular-icon">📚</div>
+                    <div class="popular-icon"><img src="img/books.png" width="20%" height="20%"></div>
                     <h3>YKS Puan Hesaplama</h3>
                     <p>TYT ve AYT puanlarınızı hesaplayın, üniversite tercihlerinizde kullanın.</p>
                     <span class="popular-link">Hemen Hesapla →</span>
                 </div>
                 <div class="popular-card" onclick="location.href='saglik/vucut_kitle_endeksi_hesaplama.html'">
-                    <div class="popular-icon">⚖️</div>
+                    <div class="popular-icon"><img src="img/scale.png" width="20%" height="20%"></div>
                     <h3>Vücut Kitle Endeksi</h3>
                     <p>Boy ve kilonuza göre VKİ hesaplayın, sağlığınızı takip edin.</p>
                     <span class="popular-link">Hemen Hesapla →</span>
                 </div>
                 <div class="popular-card" onclick="location.href='finans/doviz_hesaplama.html'">
-                    <div class="popular-icon">💱</div>
+                    <div class="popular-icon"><img src="img/conversion.png" width="20%" height="20%"></div>
                     <h3>Döviz Hesaplama</h3>
                     <p>Güncel döviz kurları ile para birimi dönüşümü yapın.</p>
                     <span class="popular-link">Hemen Hesapla →</span>
@@ -165,7 +165,7 @@
                 <h2>Hemen Başlayın!</h2>
                 <p>Yüzlerce hesaplamaya anında erişin. İhtiyacınız olan aracı bulun ve doğru sonuçlara ulaşın.</p>
                 <a href="#kredi-menu" class="cta-button" onclick="showMenu('kredi')">Kredi Hesaplamaları</a>
-                <a href="#sinav-menu" class="cta-button secondary" onclick="showMenu('sinav')">Sınav Hesaplamaları</a>
+                <a href="#sinav-menu" class="cta-button" onclick="showMenu('sinav')">Sınav Hesaplamaları</a>
             </div>
         </section>
     </main>
@@ -176,4 +176,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

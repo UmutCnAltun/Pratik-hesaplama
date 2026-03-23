@@ -1,44 +1,133 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adet Günü Hesaplama - Pratik Hesaplama.NET</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/health.css"> 
+    <link rel="stylesheet" href="../css/health.css">
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <a href="../index.html">Pratik Hesaplama.NET</a>
             <span class="slogan">"Artık hesaplamalar çok kolay"</span>
         </div>
+        <button class="hamburger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" data-menu="kredi">Kredi</a></li>
+                <li><a href="#" data-menu="finans">Finans</a></li>
+                <li><a href="#" data-menu="sinav">Sınav</a></li>
+                <li><a href="#" data-menu="matematik">Matematik</a></li>
+                <li><a href="#" data-menu="zaman">Zaman</a></li>
+                <li><a href="#" data-menu="saglik">Sağlık</a></li>
+            </ul>
+        </nav>
     </header>
+
     <div class="sub-menu-container">
-        <div id="saglik-menu" class="sub-menu" style="display: block;">
+        <div id="kredi-menu" class="sub-menu" style="display: none;">
+            <a href="../kredi/ihtiayc_kredisi_hesaplama.html">İhtiyaç Kredisi Hesaplama</a>
+            <a href="../kredi/kredi_hesaplama.html">Kredi Hesaplama</a>
+            <a href="../kredi/kredi_gecikme_faizi_hesaplama.html">Kredi Gecikme Faizi Hesaplama</a>
+            <a href="../kredi/kredi_erken_kapatma_cezasi_hesaplama.html">Kredi Erken Kapatma Cezası Hesaplama</a>
+            <a href="../kredi/kredi_karti_ek_taksit_hesaplama.html">Kredi Kartı Ek Taksit Hesaplama</a>
+        </div>
+        <div id="finans-menu" class="sub-menu" style="display: none;">
+            <a href="../finans/altin_hesaplama.html">Altın Hesaplama</a>
+            <a href="../finans/doviz_hesaplama.html">Döviz Hesaplama</a>
+            <a href="../finans/faiz_hesaplama.html">Faiz Hesaplama</a>
+            <a href="../finans/birikim_hesaplama.html">Birikim Hesaplama</a>
+            <a href="../finans/kira_artis_orani_hesaplama.html">Kira Artış Oranı Hesaplama</a>
+        </div>
+        <div id="saglik-menu" class="sub-menu" style="display: none;">
             <a href="adet_gunu_hesaplama.html">Adet Günü Hesaplama</a>
             <a href="sigara_maliyeti_hesaplama.html">Sigara Maliyeti Hesaplama</a>
             <a href="vucut_yag_orani_hesaplama.html">Vücut Yağ Oranı Hesaplama</a>
             <a href="vucut_kitle_endeksi_hesaplama.html">Vücut Kitle Endeksi Hesaplama</a>
             <a href="bebek_kilosu_hesaplama.html">Bebek Kilosu Hesaplama</a>
         </div>
+        <div id="sinav-menu" class="sub-menu" style="display: none;">
+            <a href="../sinav/not_ortalamasi_hesaplama.html">Not Ortalaması Hesaplama</a>
+            <a href="../sinav/sinav_puani_hesaplama.html">Sınav Puanı Hesaplama</a>
+            <a href="../sinav/basari_yuzdesi_hesaplama.html">Başarı Yüzdesi Hesaplama</a>
+            <a href="../sinav/sinav_zamani_hesaplama.html">Sınav Zamanı Hesaplama</a>
+            <a href="../sinav/yks_hesaplama.html">YKS Puan Hesaplama</a>
+        </div>
+        <div id="matematik-menu" class="sub-menu" style="display: none;">
+            <a href="../matematik/temel_islemler_hesaplama.html">Temel İşlemler</a>
+            <a href="../matematik/yuzde_hesaplama.html">Yüzde Hesaplama</a>
+            <a href="../matematik/kare_kok_hesaplama.html">Kare Kök Hesaplama</a>
+            <a href="../matematik/us_alma_hesaplama.html">Üs Alma</a>
+            <a href="../matematik/faktoriyel_hesaplama.html">Faktöriyel Hesaplama</a>
+        </div>
+        <div id="zaman-menu" class="sub-menu" style="display: none;">
+            <a href="../zaman/yas_hesaplama.html">Yaş Hesaplama</a>
+            <a href="../zaman/tarih_farki_hesaplama.html">Tarih Farkı Hesaplama</a>
+            <a href="../zaman/gun_sayisi_hesaplama.html">Gün Sayısı Hesaplama</a>
+            <a href="../zaman/saat_farki_hesaplama.html">Saat Farkı Hesaplama</a>
+            <a href="../zaman/hafta_hesaplama.html">Hafta/Ay/Yıl Hesaplama</a>
+        </div>
     </div>
+
 
     <main class="content-area">
         <h1 class="page-title">Adet Günü Hesaplama Aracı</h1>
-        
+
         <div class="calculator-container">
             <form id="adetGunuForm">
-                <p>Yaklaşık adet gününüzü hesaplamak için son kanama başlangıç tarihinizi ve döngü sürenizi giriniz.</p>
-                </form>
+                <div class="form-group">
+                    <label for="sonAdetTarihi">Son Kanama Başlangıç Tarihi:</label>
+                    <div class="input-container">
+                        <input type="date" id="sonAdetTarihi" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="donguSuresi">Döngü Süresi (Gün):</label>
+                    <div class="input-container">
+                        <input type="number" id="donguSuresi" placeholder="Ortalama 28 gün" min="21" max="45" value="28"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="calculate-btn">Hesapla</button>
+                    <button type="reset" class="reset-btn">Sıfırla</button>
+                </div>
+
+                <div id="sonucAlani" class="result-area" style="display: none;">
+                    <h2>Hesaplama Sonucu</h2>
+                    <p>Tahmini bir sonraki adet tarihi: <span id="sonrakiAdet"></span></p>
+                    <p>Tahmini ovulasyon (yumurtlama) tarihi: <span id="ovulasyonTarihi"></span></p>
+                    <p>Doğurganlık penceresi: <span id="dogurganlikPenceresi"></span></p>
+                    <div class="health-info">
+                        <h3>Önemli Not</h3>
+                        <p>Bu hesaplama yaklaşık değerler verir ve bilgilendirme amaçlıdır. Tıbbi teşhis veya korunma
+                            yöntemi olarak kullanılmamalıdır. Düzenli olmayan döngülerde sonuçlar yanıltıcı olabilir.
+                        </p>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <div class="info-container">
             <h2>Adet Döngüsü Hakkında Bilgiler</h2>
-            
+
             <section>
                 <h3>Adet kanaması (regl) nedir?</h3>
-                <p>Rahim iç yüzeyinde her ay döllenmiş yumurtanın gelip yapışması ve buradan beslenmesi için damarlanmasını sağlayacak bir tabaka oluşur. Eğer belli bir süre içinde döllenme olmazsa, bu duvar görevini tamamlayıp yerini alttan gelen yeni dokuya bırakarak dökülür. Bu artık dokular vücuttan dışarıya atılır. Her ay bu işlemler aynı şekilde tekrarlanır ve bu sürece **menstürel döngü (siklus)** denir. Dışarıya atılan dokulara ise **adet kanaması** denir.</p>
+                <p>Rahim iç yüzeyinde her ay döllenmiş yumurtanın gelip yapışması ve buradan beslenmesi için
+                    damarlanmasını sağlayacak bir tabaka oluşur. Eğer belli bir süre içinde döllenme olmazsa, bu duvar
+                    görevini tamamlayıp yerini alttan gelen yeni dokuya bırakarak dökülür. Bu artık dokular vücuttan
+                    dışarıya atılır. Her ay bu işlemler aynı şekilde tekrarlanır ve bu sürece **menstürel döngü
+                    (siklus)** denir. Dışarıya atılan dokulara ise **adet kanaması** denir.</p>
             </section>
 
             <section>
@@ -48,12 +137,15 @@
 
             <section>
                 <h3>Adet takvimi nasıl hesaplanır?</h3>
-                <p>Kanamalar genellikle düzenli bir döngü içinde tekrarlanır. Bu düzen kişiden kişiye değişmekle birlikte genellikle **21-35 gün** arasında değişen sürelerden meydana gelir. Kişi, daha önceki son birkaç kanamasının başlangıç tarihlerini bir takvime işaretlerse, bunların arasındaki gün sayısını bularak genel düzenini tespit edebilir.</p>
+                <p>Kanamalar genellikle düzenli bir döngü içinde tekrarlanır. Bu düzen kişiden kişiye değişmekle
+                    birlikte genellikle **21-35 gün** arasında değişen sürelerden meydana gelir. Kişi, daha önceki son
+                    birkaç kanamasının başlangıç tarihlerini bir takvime işaretlerse, bunların arasındaki gün sayısını
+                    bularak genel düzenini tespit edebilir.</p>
             </section>
         </div>
 
     </main>
-    
+
     <footer class="footer">
         <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
     </footer>
@@ -61,4 +153,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/adet_gunu.js"></script>
 </body>
+
 </html>

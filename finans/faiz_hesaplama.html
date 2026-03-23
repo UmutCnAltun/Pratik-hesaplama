@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,82 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/finance.css">
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
             <a href="../index.html">Pratik Hesaplama.NET</a>
             <span class="slogan">"Artık hesaplamalar çok kolay"</span>
         </div>
+        <button class="hamburger-menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" data-menu="kredi">Kredi</a></li>
+                <li><a href="#" data-menu="finans">Finans</a></li>
+                <li><a href="#" data-menu="sinav">Sınav</a></li>
+                <li><a href="#" data-menu="matematik">Matematik</a></li>
+                <li><a href="#" data-menu="zaman">Zaman</a></li>
+                <li><a href="#" data-menu="saglik">Sağlık</a></li>
+            </ul>
+        </nav>
     </header>
+
     <div class="sub-menu-container">
-        <div id="finans-menu" class="sub-menu" style="display: block;">
+        <div id="kredi-menu" class="sub-menu" style="display: none;">
+            <a href="../kredi/ihtiayc_kredisi_hesaplama.html">İhtiyaç Kredisi Hesaplama</a>
+            <a href="../kredi/kredi_hesaplama.html">Kredi Hesaplama</a>
+            <a href="../kredi/kredi_gecikme_faizi_hesaplama.html">Kredi Gecikme Faizi Hesaplama</a>
+            <a href="../kredi/kredi_erken_kapatma_cezasi_hesaplama.html">Kredi Erken Kapatma Cezası Hesaplama</a>
+            <a href="../kredi/kredi_karti_ek_taksit_hesaplama.html">Kredi Kartı Ek Taksit Hesaplama</a>
+        </div>
+        <div id="finans-menu" class="sub-menu" style="display: none;">
             <a href="altin_hesaplama.html">Altın Hesaplama</a>
             <a href="doviz_hesaplama.html">Döviz Hesaplama</a>
             <a href="faiz_hesaplama.html">Faiz Hesaplama</a>
             <a href="birikim_hesaplama.html">Birikim Hesaplama</a>
             <a href="kira_artis_orani_hesaplama.html">Kira Artış Oranı Hesaplama</a>
         </div>
+        <div id="saglik-menu" class="sub-menu" style="display: none;">
+            <a href="../saglik/adet_gunu_hesaplama.html">Adet Günü Hesaplama</a>
+            <a href="../saglik/sigara_maliyeti_hesaplama.html">Sigara Maliyeti Hesaplama</a>
+            <a href="../saglik/vucut_yag_orani_hesaplama.html">Vücut Yağ Oranı Hesaplama</a>
+            <a href="../saglik/vucut_kitle_endeksi_hesaplama.html">Vücut Kitle Endeksi Hesaplama</a>
+            <a href="../saglik/bebek_kilosu_hesaplama.html">Bebek Kilosu Hesaplama</a>
+        </div>
+        <div id="sinav-menu" class="sub-menu" style="display: none;">
+            <a href="../sinav/not_ortalamasi_hesaplama.html">Not Ortalaması Hesaplama</a>
+            <a href="../sinav/sinav_puani_hesaplama.html">Sınav Puanı Hesaplama</a>
+            <a href="../sinav/basari_yuzdesi_hesaplama.html">Başarı Yüzdesi Hesaplama</a>
+            <a href="../sinav/sinav_zamani_hesaplama.html">Sınav Zamanı Hesaplama</a>
+            <a href="../sinav/yks_hesaplama.html">YKS Puan Hesaplama</a>
+        </div>
+        <div id="matematik-menu" class="sub-menu" style="display: none;">
+            <a href="../matematik/temel_islemler_hesaplama.html">Temel İşlemler</a>
+            <a href="../matematik/yuzde_hesaplama.html">Yüzde Hesaplama</a>
+            <a href="../matematik/kare_kok_hesaplama.html">Kare Kök Hesaplama</a>
+            <a href="../matematik/us_alma_hesaplama.html">Üs Alma</a>
+            <a href="../matematik/faktoriyel_hesaplama.html">Faktöriyel Hesaplama</a>
+        </div>
+        <div id="zaman-menu" class="sub-menu" style="display: none;">
+            <a href="../zaman/yas_hesaplama.html">Yaş Hesaplama</a>
+            <a href="../zaman/tarih_farki_hesaplama.html">Tarih Farkı Hesaplama</a>
+            <a href="../zaman/gun_sayisi_hesaplama.html">Gün Sayısı Hesaplama</a>
+            <a href="../zaman/saat_farki_hesaplama.html">Saat Farkı Hesaplama</a>
+            <a href="../zaman/hafta_hesaplama.html">Hafta/Ay/Yıl Hesaplama</a>
+        </div>
     </div>
 
     <main class="content-area">
         <h1 class="page-title">Faiz Hesaplama Aracı</h1>
-        
+
         <div class="calculator-container">
             <form id="faizForm">
                 <p class="required-info">* Doldurulması zorunlu alanlar.</p>
-                
+
                 <div class="form-group">
                     <label for="anapara">* Ana Para:</label>
                     <div class="input-container">
@@ -51,7 +104,7 @@
                         <input type="number" id="sure" placeholder="Örn. 2" required>
                     </div>
                 </div>
-                
+
                 <div class="form-actions">
                     <button type="submit" class="calculate-btn">Hesapla</button>
                     <button type="reset" class="reset-btn">Sıfırla</button>
@@ -65,8 +118,22 @@
             </div>
         </div>
 
+        <div class="info-container">
+            <h2>Faiz Hesaplama Hakkında</h2>
+            <section>
+                <h3>Mevduat faizi nedir?</h3>
+                <p>Bankaya belirli bir süre için yatırdığınız paraya karşılık bankanın size ödediği getiri tutarıdır.
+                    Vadeli mevduat hesapları, risksiz getiri arayan yatırımcılar için popüler bir seçenektir.</p>
+            </section>
+            <section>
+                <h3>Stopaj (Vergi) kesintisi</h3>
+                <p>Elde edilen faiz geliri üzerinden devlet tarafından belirli oranlarda stopaj vergisi kesilir.
+                    Hesaplama aracımız genellikle brüt veya net getiri ayrımını dikkate almanızı sağlar.</p>
+            </section>
+        </div>
+
     </main>
-    
+
     <footer class="footer">
         <p>&copy; 2025 Pratik Hesaplama .NET Tüm Hakları Saklıdır.</p>
     </footer>
@@ -74,4 +141,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/faiz_hesaplama.js"></script>
 </body>
+
 </html>

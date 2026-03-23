@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             yagOrani = (1.20 * bmi) + (0.23 * yas) - 5.4;
         }
         
-        yagOraniSpan.textContent = Math.max(0, yagOrani).toFixed(1) + ' %';
+        yagOraniSpan.textContent = Math.max(0, yagOrani).toFixed(1) ;
         sonucAlani.style.display = 'block';
     });
 });

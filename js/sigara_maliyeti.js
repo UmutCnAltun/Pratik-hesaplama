@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const aylikMaliyet = gunlukMaliyet * 30;
         const yillikMaliyet = gunlukMaliyet * 365;
         
-        gunlukMaliyetSpan.textContent = gunlukMaliyet.toFixed(2) + ' TL';
-        aylikMaliyetSpan.textContent = aylikMaliyet.toFixed(2) + ' TL';
-        yillikMaliyetSpan.textContent = yillikMaliyet.toFixed(2) + ' TL';
+        gunlukMaliyetSpan.textContent = gunlukMaliyet.toFixed(2) ;
+        aylikMaliyetSpan.textContent = aylikMaliyet.toFixed(2) ;
+        yillikMaliyetSpan.textContent = yillikMaliyet.toFixed(2) ;
         sonucAlani.style.display = 'block';
     });
 });
